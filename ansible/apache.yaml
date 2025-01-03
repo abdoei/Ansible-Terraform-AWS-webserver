@@ -1,0 +1,8 @@
+---
+- name: Install apache2 and populate index.html
+  hosts: all
+  become: yes
+  remote_user: ubuntu
+  
+  roles:
+    - apache
