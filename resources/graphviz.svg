@@ -1,24 +1,12 @@
-<svg width="938pt" height="180pt" viewBox="0.00 0.00 938.38 179.77" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 175.77)">
+<svg width="1035pt" height="167pt" viewBox="0.00 0.00 1034.75 167.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(4 163)">
 <title>G</title>
-<polygon fill="white" stroke="none" points="-4,4 -4,-175.77 934.38,-175.77 934.38,4 -4,4"/>
+<polygon fill="white" stroke="none" points="-4,4 -4,-163 1030.75,-163 1030.75,4 -4,4"/>
 <!-- aws_eip.IP -->
 <g id="node1" class="node">
 <title>aws_eip.IP</title>
-<polygon fill="none" stroke="black" points="930.38,-104 852.55,-104 852.55,-68 930.38,-68 930.38,-104"/>
-<text text-anchor="middle" x="891.47" y="-81.8" font-family="sans-serif" font-size="14.00">aws_eip.IP</text>
-</g>
-<!-- aws_instance.name -->
-<g id="node2" class="node">
-<title>aws_instance.name</title>
-<polygon fill="none" stroke="black" points="783.51,-54 659.05,-54 659.05,-18 783.51,-18 783.51,-54"/>
-<text text-anchor="middle" x="721.28" y="-31.8" font-family="sans-serif" font-size="14.00">aws_instance.name</text>
-</g>
-<!-- aws_eip.IP&#45;&gt;aws_instance.name -->
-<g id="edge1" class="edge">
-<title>aws_eip.IP-&gt;aws_instance.name</title>
-<path fill="none" stroke="black" d="M852.3,-74.65C835.21,-69.57 814.47,-63.41 794.62,-57.51"/>
-<polygon fill="black" stroke="black" points="795.74,-54.19 785.16,-54.69 793.75,-60.9 795.74,-54.19"/>
+<polygon fill="none" stroke="black" points="760.19,-159 682.36,-159 682.36,-123 760.19,-123 760.19,-159"/>
+<text text-anchor="middle" x="721.28" y="-136.8" font-family="sans-serif" font-size="14.00">aws_eip.IP</text>
 </g>
 <!-- aws_internet_gateway.gw -->
 <g id="node3" class="node">
@@ -27,22 +15,34 @@
 <text text-anchor="middle" x="240.58" y="-121.8" font-family="sans-serif" font-size="14.00">aws_internet_gateway.gw</text>
 </g>
 <!-- aws_eip.IP&#45;&gt;aws_internet_gateway.gw -->
-<g id="edge2" class="edge">
+<g id="edge1" class="edge">
 <title>aws_eip.IP-&gt;aws_internet_gateway.gw</title>
-<path fill="none" stroke="black" d="M870.17,-104.33C856.18,-115.73 836.57,-129.43 816.55,-136 622.66,-199.66 560.88,-161.56 357.48,-145 349.51,-144.35 341.27,-143.46 333.03,-142.41"/>
+<path fill="none" stroke="black" d="M682.06,-143.73C615.84,-147.95 475.51,-154.61 357.48,-145 349.51,-144.35 341.27,-143.46 333.03,-142.41"/>
 <polygon fill="black" stroke="black" points="333.68,-138.96 323.3,-141.09 332.74,-145.9 333.68,-138.96"/>
 </g>
 <!-- aws_network_interface.web_server_ni -->
 <g id="node4" class="node">
 <title>aws_network_interface.web_server_ni</title>
-<polygon fill="none" stroke="black" points="590,-44 357.48,-44 357.48,-8 590,-8 590,-44"/>
-<text text-anchor="middle" x="473.74" y="-21.8" font-family="sans-serif" font-size="14.00">aws_network_interface.web_server_ni</text>
+<polygon fill="none" stroke="black" points="590,-82 357.48,-82 357.48,-46 590,-46 590,-82"/>
+<text text-anchor="middle" x="473.74" y="-59.8" font-family="sans-serif" font-size="14.00">aws_network_interface.web_server_ni</text>
 </g>
-<!-- aws_instance.name&#45;&gt;aws_network_interface.web_server_ni -->
+<!-- aws_eip.IP&#45;&gt;aws_network_interface.web_server_ni -->
+<g id="edge2" class="edge">
+<title>aws_eip.IP-&gt;aws_network_interface.web_server_ni</title>
+<path fill="none" stroke="black" d="M682,-124.72C656.29,-114.19 621.49,-100.68 590,-91 583.55,-89.02 576.87,-87.1 570.1,-85.26"/>
+<polygon fill="black" stroke="black" points="571.47,-82 560.91,-82.83 569.68,-88.77 571.47,-82"/>
+</g>
+<!-- aws_instance.apache_server -->
+<g id="node2" class="node">
+<title>aws_instance.apache_server</title>
+<polygon fill="none" stroke="black" points="1026.75,-159 852.55,-159 852.55,-123 1026.75,-123 1026.75,-159"/>
+<text text-anchor="middle" x="939.65" y="-136.8" font-family="sans-serif" font-size="14.00">aws_instance.apache_server</text>
+</g>
+<!-- aws_instance.apache_server&#45;&gt;aws_eip.IP -->
 <g id="edge3" class="edge">
-<title>aws_instance.name-&gt;aws_network_interface.web_server_ni</title>
-<path fill="none" stroke="black" d="M658.63,-33.49C641.1,-32.78 621.32,-31.97 601.41,-31.16"/>
-<polygon fill="black" stroke="black" points="601.67,-27.67 591.54,-30.76 601.38,-34.66 601.67,-27.67"/>
+<title>aws_instance.apache_server-&gt;aws_eip.IP</title>
+<path fill="none" stroke="black" d="M852.2,-141C824.89,-141 795.65,-141 771.84,-141"/>
+<polygon fill="black" stroke="black" points="772.13,-137.5 762.13,-141 772.13,-144.5 772.13,-137.5"/>
 </g>
 <!-- aws_vpc.main_vpc -->
 <g id="node9" class="node">
@@ -59,26 +59,26 @@
 <!-- aws_security_group.sg1 -->
 <g id="node7" class="node">
 <title>aws_security_group.sg1</title>
-<polygon fill="none" stroke="black" points="316.44,-36 164.73,-36 164.73,0 316.44,0 316.44,-36"/>
-<text text-anchor="middle" x="240.58" y="-13.8" font-family="sans-serif" font-size="14.00">aws_security_group.sg1</text>
+<polygon fill="none" stroke="black" points="316.44,-90 164.73,-90 164.73,-54 316.44,-54 316.44,-90"/>
+<text text-anchor="middle" x="240.58" y="-67.8" font-family="sans-serif" font-size="14.00">aws_security_group.sg1</text>
 </g>
 <!-- aws_network_interface.web_server_ni&#45;&gt;aws_security_group.sg1 -->
 <g id="edge5" class="edge">
 <title>aws_network_interface.web_server_ni-&gt;aws_security_group.sg1</title>
-<path fill="none" stroke="black" d="M357.16,-22C347.37,-21.66 337.58,-21.32 328.07,-20.99"/>
-<polygon fill="black" stroke="black" points="328.26,-17.5 318.15,-20.65 328.02,-24.49 328.26,-17.5"/>
+<path fill="none" stroke="black" d="M357.16,-68C347.37,-68.34 337.58,-68.68 328.07,-69.01"/>
+<polygon fill="black" stroke="black" points="328.02,-65.51 318.15,-69.35 328.26,-72.5 328.02,-65.51"/>
 </g>
 <!-- aws_subnet.sub1 -->
 <g id="node8" class="node">
 <title>aws_subnet.sub1</title>
-<polygon fill="none" stroke="black" points="296.22,-90 184.95,-90 184.95,-54 296.22,-54 296.22,-90"/>
-<text text-anchor="middle" x="240.58" y="-67.8" font-family="sans-serif" font-size="14.00">aws_subnet.sub1</text>
+<polygon fill="none" stroke="black" points="296.22,-36 184.95,-36 184.95,0 296.22,0 296.22,-36"/>
+<text text-anchor="middle" x="240.58" y="-13.8" font-family="sans-serif" font-size="14.00">aws_subnet.sub1</text>
 </g>
 <!-- aws_network_interface.web_server_ni&#45;&gt;aws_subnet.sub1 -->
 <g id="edge6" class="edge">
 <title>aws_network_interface.web_server_ni-&gt;aws_subnet.sub1</title>
-<path fill="none" stroke="black" d="M380.05,-44.44C355.87,-49.26 330.31,-54.34 307.81,-58.82"/>
-<polygon fill="black" stroke="black" points="307.3,-55.35 298.18,-60.74 308.67,-62.22 307.3,-55.35"/>
+<path fill="none" stroke="black" d="M380.05,-45.56C355.87,-40.74 330.31,-35.66 307.81,-31.18"/>
+<polygon fill="black" stroke="black" points="308.67,-27.78 298.18,-29.26 307.3,-34.65 308.67,-27.78"/>
 </g>
 <!-- aws_route_table.rt -->
 <g id="node5" class="node">
@@ -95,32 +95,32 @@
 <!-- aws_route_table_association.ta -->
 <g id="node6" class="node">
 <title>aws_route_table_association.ta</title>
-<polygon fill="none" stroke="black" points="816.55,-127 626,-127 626,-91 816.55,-91 816.55,-127"/>
-<text text-anchor="middle" x="721.28" y="-104.8" font-family="sans-serif" font-size="14.00">aws_route_table_association.ta</text>
+<polygon fill="none" stroke="black" points="816.55,-82 626,-82 626,-46 816.55,-46 816.55,-82"/>
+<text text-anchor="middle" x="721.28" y="-59.8" font-family="sans-serif" font-size="14.00">aws_route_table_association.ta</text>
 </g>
 <!-- aws_route_table_association.ta&#45;&gt;aws_route_table.rt -->
 <g id="edge8" class="edge">
 <title>aws_route_table_association.ta-&gt;aws_route_table.rt</title>
-<path fill="none" stroke="black" d="M625.7,-112.47C598.98,-113.45 570.39,-114.49 545.35,-115.41"/>
-<polygon fill="black" stroke="black" points="545.5,-111.9 535.63,-115.77 545.75,-118.9 545.5,-111.9"/>
+<path fill="none" stroke="black" d="M636.46,-82.43C606.66,-88.99 573.44,-96.29 544.9,-102.57"/>
+<polygon fill="black" stroke="black" points="544.29,-99.12 535.28,-104.69 545.79,-105.96 544.29,-99.12"/>
 </g>
 <!-- aws_route_table_association.ta&#45;&gt;aws_subnet.sub1 -->
 <g id="edge9" class="edge">
 <title>aws_route_table_association.ta-&gt;aws_subnet.sub1</title>
-<path fill="none" stroke="black" d="M625.75,-95C613.73,-93.5 601.59,-92.11 590,-91 492.04,-81.58 378.1,-76.46 307.91,-73.98"/>
-<polygon fill="black" stroke="black" points="308.23,-70.49 298.12,-73.64 307.99,-77.49 308.23,-70.49"/>
+<path fill="none" stroke="black" d="M640.68,-45.53C624.01,-42.22 606.49,-39.15 590,-37 492.27,-24.28 378.04,-20.05 307.75,-18.66"/>
+<polygon fill="black" stroke="black" points="308.01,-15.17 297.94,-18.48 307.88,-22.17 308.01,-15.17"/>
 </g>
 <!-- aws_security_group.sg1&#45;&gt;aws_vpc.main_vpc -->
 <g id="edge10" class="edge">
 <title>aws_security_group.sg1-&gt;aws_vpc.main_vpc</title>
-<path fill="none" stroke="black" d="M179.26,-36.43C164.69,-40.88 148.99,-45.68 133.98,-50.26"/>
-<polygon fill="black" stroke="black" points="133.19,-46.85 124.65,-53.12 135.24,-53.54 133.19,-46.85"/>
+<path fill="none" stroke="black" d="M164.38,-72C154.82,-72 145.06,-72 135.55,-72"/>
+<polygon fill="black" stroke="black" points="135.62,-68.5 125.62,-72 135.62,-75.5 135.62,-68.5"/>
 </g>
 <!-- aws_subnet.sub1&#45;&gt;aws_vpc.main_vpc -->
 <g id="edge11" class="edge">
 <title>aws_subnet.sub1-&gt;aws_vpc.main_vpc</title>
-<path fill="none" stroke="black" d="M184.63,-72C168.99,-72 151.71,-72 135.2,-72"/>
-<polygon fill="black" stroke="black" points="135.43,-68.5 125.43,-72 135.43,-75.5 135.43,-68.5"/>
+<path fill="none" stroke="black" d="M184.63,-34.79C168.67,-39.67 151.01,-45.06 134.2,-50.2"/>
+<polygon fill="black" stroke="black" points="133.29,-46.82 124.75,-53.09 135.33,-53.51 133.29,-46.82"/>
 </g>
 </g>
 </svg>

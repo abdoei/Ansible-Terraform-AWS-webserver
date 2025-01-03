@@ -1,10 +1,11 @@
 # Terraform AWS EC2 Web Server
-This is a simple Terraform project to create an EC2 instance on AWS. The instance will be running a simple apache web server. The project will also create a security group to allow HTTP traffic to the instance.
+This is a simple Terraform project to create an EC2 instance on AWS. After that an Ansible playbook is run to install Apache web server on the instance and populate a `/var/www/html/index.html` file with some [content](ansible/roles/apache/files/index.html). 
 
 
-## Prerequisites
+## Prerequisites [Linux]
 - Terraform installed
 - AWS account
+- Ansible installed
 - [optional] `secret-tool` Linux tool installed to store AWS credentials under `{aws,secret_key}`, `{aws,secret_key}` pairs.
 
 ## Graphz
@@ -26,16 +27,18 @@ This is a simple Terraform project to create an EC2 instance on AWS. The instanc
 
     Outputs:
 
-    public_IP = "52.45.215.117"
+    public_IP = "52.202.76.104"
     ```
-6. Open a browser and navigate to the public IP address of the instance. You should see the default apache web page.
+6. Open a browser and navigate to the public IP address of the instance. You should see the populated index.html file.
+
+![landing_page](resources/web.png)
 7. To destroy the instance, run the following command.
     ```bash
-    terraform destroy $(eval echo $(cat add_secrets | xargs))
+    terraform destroy $(eval echo $(cat add_secrets | xargs)) -auto-approve
     ```
 
 ## Notes
-- If you want to `ssh` into the instance:
+If you want to `ssh` into the instance:
 1. create a key pair with the name `main-key` (or whatever you want but change the name in the `main.tf`) using the [aws console](https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#KeyPairs:).
 2. Download the key pair `pem` file (for Unix/Linux) and place it in the directory where you would `ssh` from.
 3. Run the following command to `ssh` into the instance.
